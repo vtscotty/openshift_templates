@@ -89,49 +89,49 @@ metadata:
 message: "Login on https://${TENANT_NAME}-admin.${WILDCARD_DOMAIN} as ${ADMIN_USERNAME}/${ADMIN_PASSWORD}"
 objects:
 
-- apiVersion: "v1"
-  kind: "PersistentVolumeClaim"
-  metadata:
-    name: "property-storage"
-  spec:
-    accessModes:
-    - "ReadWriteMany"
-    resources:
-      requests:
-        storage: "100Mi"
+#- apiVersion: "v1"
+#  kind: "PersistentVolumeClaim"
+#  metadata:
+#    name: "property-storage"
+#  spec:
+#    accessModes:
+#    - "ReadWriteMany"
+#    resources:
+#      requests:
+#        storage: "100Mi"
 
-- apiVersion: "v1"
-  kind: "PersistentVolumeClaim"
-  metadata:
-    name: "auth-server-storage"
-  spec:
-    accessModes:
-    - "ReadWriteOnce"
-    resources:
-      requests:
-        storage: "1Gi"
+#- apiVersion: "v1"
+#  kind: "PersistentVolumeClaim"
+#  metadata:
+#    name: "auth-server-storage"
+#  spec:
+#    accessModes:
+#    - "ReadWriteOnce"
+#   resources:
+#      requests:
+#        storage: "1Gi"
 
-- apiVersion: "v1"
-  kind: "PersistentVolumeClaim"
-  metadata:
-    name: "db-storage-1"
-  spec:
-    accessModes:
-    - "ReadWriteOnce"
-    resources:
-      requests:
-        storage: "1Gi"
+#- apiVersion: "v1"
+#  kind: "PersistentVolumeClaim"
+#  metadata:
+#    name: "db-storage-1"
+#  spec:
+#    accessModes:
+#    - "ReadWriteOnce"
+#    resources:
+#      requests:
+#      storage: "1Gi"
 
-- apiVersion: "v1"
-  kind: "PersistentVolumeClaim"
-  metadata:
-    name: "db-storage-2"
-  spec:
-    accessModes:
-    - "ReadWriteOnce"
-    resources:
-      requests:
-        storage: "1Gi"
+#- apiVersion: "v1"
+#  kind: "PersistentVolumeClaim"
+#  metadata:
+#    name: "db-storage-2"
+#  spec:
+#    accessModes:
+#    - "ReadWriteOnce"
+#    resources:
+#      requests:
+#        storage: "1Gi"
 
 - apiVersion: v1
   kind: DeploymentConfig
