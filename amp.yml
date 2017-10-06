@@ -207,16 +207,16 @@ objects:
           volumeMounts:
           - name: db-storage-2
             mountPath: "/var/lib/redis/data"
-          - name: redis-config
-            mountPath: /etc/redis.conf
-            subPath: redis.conf
+          #- name: redis-config
+           # mountPath: /etc/redis.conf
+           # subPath: redis.conf
         volumes:
         - name: db-storage-2
           persistentVolumeClaim:
             claimName: db-storage-2
-        - name: redis-config
-          configMap:
-            name: redis-config
+       # - name: redis-config
+       #   configMap:
+        #    name: redis-config
             #items:
             #- key: redis.conf
             # path: redis.conf
@@ -429,9 +429,9 @@ objects:
           volumeMounts:
           - name: db-storage-1
             mountPath: "/var/lib/redis/data"
-          - name: redis-config
-            mountPath: /etc/redis.conf
-            subPath: redis.conf
+          #- name: redis-config
+          # mountPath: /etc/redis.conf
+          #  subPath: redis.conf
           readinessProbe:
             exec:
               command:
@@ -451,9 +451,9 @@ objects:
         - name: db-storage-1
           persistentVolumeClaim:
             claimName: db-storage-1
-        - name: redis-config
-          configMap:
-            name: redis-config
+       # - name: redis-config
+       #   configMap:
+       #     name: redis-config
             #items:
             #- key: redis.conf
             #  path: redis.conf
@@ -1232,7 +1232,8 @@ parameters:
 - name: REDIS_IMAGE
   description: Redis image to use
   required: true
-  value: rhscl/redis-32-rhel7:3.2
+  #value: rhscl/redis-32-rhel7:3.2
+  value: sfrost/openshift-redis-amp
 - name: MYSQL_IMAGE
   description: Mysql image to use
   required: true
