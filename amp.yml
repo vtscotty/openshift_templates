@@ -217,9 +217,9 @@ objects:
         - name: redis-config
           configMap:
             name: redis-config
-            items:
-            - key: redis.conf
-              path: redis.conf
+            #items:
+            #- key: redis.conf
+            # path: redis.conf
     triggers:
     - type: ConfigChange
 
@@ -454,9 +454,9 @@ objects:
         - name: redis-config
           configMap:
             name: redis-config
-            items:
-            - key: redis.conf
-              path: redis.conf
+            #items:
+            #- key: redis.conf
+            #  path: redis.conf
     triggers:
     - type: ConfigChange
 
@@ -1104,7 +1104,7 @@ objects:
         - name: 'auth-server-storage'
           persistentVolumeClaim:
             claimName: 'auth-server-storage'
-- kind: ConfigMap
+- kind: 
   apiVersion: v1
   metadata:
     name: redis-config
@@ -1157,7 +1157,6 @@ objects:
       dir /var/lib/redis/data
 
 - kind: ConfigMap
-
   apiVersion: v1
   metadata:
     name: smtp
